@@ -1,0 +1,119 @@
+body {
+  margin: 0 200px;
+  overflow: scroll;
+}
+
+/* .클래스명 */
+.navigation {
+  display: flex;
+  margin: 10px 30px;
+}
+
+/* 태그명 */
+nav {
+  width: 100%;
+}
+
+nav span {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  padding-left: 20px;
+  flex: 2;
+}
+
+/* 아이디명 */
+#icon2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.profile {
+  display: flex;
+  margin: 30px;
+  gap: 5vw;
+}
+
+.profileImg {
+  width: 150px;
+  height: 150px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileLeft {
+  display: flex;
+  align-items: center;
+}
+
+.profileImg img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+}
+
+ul {
+  /* 리스트로 나타내둔 거 앞에 점 없애기 */
+  list-style: none;
+  padding-left: 0px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.number {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.gridImg {
+  /* 이미지 그리드로 표현 */
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 5px;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+footer div {
+  /* 아래 푸터 설정 */
+  position: fixed;
+  bottom: 0px;
+
+  width: calc(100% - 400px);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-top: 1px solid gray;
+}
+
+a {
+  /* 하이퍼링크 기본 상태 설정 */
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  /* 호버 상태일 때의 스타일 */
+  color: blue; /* 글자색을 파란색으로 변경 */
+}
