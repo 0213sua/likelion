@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="session4-3.css" />
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!---한국어 사용하려면 필수로 적어야 하는 부분-->
+    <meta
+      name="viewport"
+      content=""
+      width="device-width,"
+      initial-scale="1.0"
+    />
+    <title>Instagram sign up</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="signup-box">
+        <img src="text_logo.png" alt="Instagram Logo" class="logo" />
+        <p> 친구들의 사진과 동영상을 보려면 <br>   가입하세요.</p>
+        <form>
+          <input type="text"  placeholder="휴대폰 번호 또는 이메일 주소"  class="input-field" id="email-input"/>
+          <input type="text" placeholder="성명" class="input-field" />
+          <input type="text" placeholder="사용자 이름" class="input-field" />
+          <input type="password" placeholder="비밀번호" class="input-field" id="password-input" />
+          <button type="submit" class="signup-btn" id="signup-btn">가입</button>
+        </form>
+        
+      <p>가입하면 Instagram의 약관, 데이터 정책 및 쿠키 정책에 동의하게 됩니다.</p>
+    </div>
+  </body>
+
+<script>
+    
+const emailInput = document.getElementById('email-input');
+const passwordInput = document.getElementById('password-input');
+const signupBtn = document.getElementById('signup-btn');
+
+// 이메일 유효성 검사 함수
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// 비밀번호 유효성 검사 함수
+function isValidPassword(password) {
+  return password.length >= 7;
+}
+
+// 이메일 및 비밀번호 입력 필드 이벤트 리스너
+emailInput.addEventListener('input', validateForm);
+passwordInput.addEventListener('input', validateForm);
+
+// 유효성 검사 및 가입 버튼 활성화 함수
+function validateForm() {
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  if (isValidEmail(email) && isValidPassword(password)) {
+    signupBtn.disabled = false;
+    signupBtn.style.backgroundColor = '#0095f6';
+  } else {
+    signupBtn.disabled = true;
+    signupBtn.style.backgroundColor = '#b2dffc';
+  }
+}
+
+</script>
+
+
+
+
+</html>
