@@ -117,3 +117,17 @@ a:hover {
   /* 호버 상태일 때의 스타일 */
   color: blue; /* 글자색을 파란색으로 변경 */
 }
+
+.title {
+  font-size: 40px;
+}
+
+.title {
+  font-size: 40px;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 20px;
+  }
+}
